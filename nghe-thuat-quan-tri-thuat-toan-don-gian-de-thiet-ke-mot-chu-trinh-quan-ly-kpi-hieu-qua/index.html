@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" class="no-js"><head><meta charset="UTF-8"><meta name="google-site-verification" content="Fgxw2nWZA9qaPSo9Pu2FkJZvgAQHBFOMq5GlPjNBIGY"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=0.5"><meta name="keywords" content="đánh giá nhân viên, đánh giá nhân sự, đánh giá năng lực, kpi đánh giá nhân viên, đánh giá kpi, tiêu chuẩn đánh giá nhân viên, bản đánh giá nhân viên, đánh giá thực hiện công việc, nhân sự,quy trình bán hàng,báo cáo doanh số,báo cáo quản lý bán hàng,mua phần mềm quản lý bán hàng,phan mem CRM,quản lý thông tin khách hàng,quy trình bán hàng,phan mem CRM"><meta name="description" content="Cloudjet Blog - Tối ưu hóa lợi ích doanh nghiệp - Đánh giá nhân viên hiệu quả"><title>[Nghệ Thuật Quản Trị] Thuật toán đơn giản để thiết kế một chu trình quản lý KPI hiệu quả by Cloudjet Blog</title><link rel="author" href="https://plus.google.com/107975323849103477884?rel=author"><link rel="stylesheet" type="text/css" media="all" href="http://blog.cloudjetsolutions.com/wp-content/themes/svbtle/style.css"><link rel="shortcut icon" href="http://static.cjs.vn/favicon.ico"><style>blockquote {border-color: #2099bc;}figure.logo, aside.alsoby li a:hover, aside.kudo.complete span.circle {background-color: #2099bc;}section.preview header#begin h2,ul#user_meta a:hover,nav.pagination span.next a,nav.pagination span.prev a {color: #2099bc;}ul#user_meta a:hover,nav.pagination span.next a,nav.pagination span.prev a {border-color: #2099bc;}::-moz-selection { background: #2099bc; color: #fff; text-shadow: none;}::selection { background: #2099bc; color: #fff; text-shadow: none;}
+<html lang="en-US" class="no-js"><head><meta charset="UTF-8"><meta name="google-site-verification" content="Fgxw2nWZA9qaPSo9Pu2FkJZvgAQHBFOMq5GlPjNBIGY"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=0.5"><meta name="keywords" content="đánh giá nhân viên, đánh giá nhân sự, đánh giá năng lực, kpi đánh giá nhân viên, đánh giá kpi, tiêu chuẩn đánh giá nhân viên, bản đánh giá nhân viên, đánh giá thực hiện công việc, nhân sự,quy trình bán hàng,báo cáo doanh số,báo cáo quản lý bán hàng,mua phần mềm quản lý bán hàng,phan mem CRM,quản lý thông tin khách hàng,quy trình bán hàng,phan mem CRM"><meta name="description" content="Cloudjet Blog - Tối ưu hóa lợi ích doanh nghiệp - Đánh giá nhân viên hiệu quả"><title>[Nghệ Thuật Quản Trị] Thuật toán đơn giản để thiết kế một chu trình quản lý KPI hiệu quả by Cloudjet Blog</title><link rel="author" href="https://plus.google.com/107975323849103477884?rel=author"><link rel="stylesheet" type="text/css" media="all" href="https://blog.cloudjetsolutions.com/wp-content/themes/svbtle/style.css"><link rel="shortcut icon" href="http://static.cjs.vn/favicon.ico"><style>blockquote {border-color: #2099bc;}figure.logo, aside.alsoby li a:hover, aside.kudo.complete span.circle {background-color: #2099bc;}section.preview header#begin h2,ul#user_meta a:hover,nav.pagination span.next a,nav.pagination span.prev a {color: #2099bc;}ul#user_meta a:hover,nav.pagination span.next a,nav.pagination span.prev a {border-color: #2099bc;}::-moz-selection { background: #2099bc; color: #fff; text-shadow: none;}::selection { background: #2099bc; color: #fff; text-shadow: none;}
 
 
 #disqus_thread
@@ -9,8 +9,8 @@ figure.logo a {
 background-repeat: no-repeat;
 background-position: center;
 }
-		</style><link rel="amphtml" href="http://blog.cloudjetsolutions.com/nghe-thuat-quan-tri-thuat-toan-don-gian-de-thiet-ke-mot-chu-trinh-quan-ly-kpi-hieu-qua/amp/"><link rel="dns-prefetch" href="http://blog.cloudjetsolutions.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="http://blog.cloudjetsolutions.com/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="hctpc_stylesheet-css" href="http://blog.cloudjetsolutions.com/wp-content/plugins/captcha/css/front_end_style.css" type="text/css" media="all"><link rel="stylesheet" id="dashicons-css" href="http://blog.cloudjetsolutions.com/wp-includes/css/dashicons.min.css" type="text/css" media="all"><link rel="stylesheet" id="hctpc_desktop_style-css" href="http://blog.cloudjetsolutions.com/wp-content/plugins/captcha/css/desktop_style.css" type="text/css" media="all"><script type="text/javascript" src="http://blog.cloudjetsolutions.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="http://blog.cloudjetsolutions.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><style type="text/css">
-figure.logo a, aside#logo div a, aside.kudo.complete span.circle{background-image: url(http://blog.cloudjetsolutions.com/wp-content/uploads/2014/03/cropped-CJS-original.jpg);}
+		</style><link rel="amphtml" href="https://blog.cloudjetsolutions.com/nghe-thuat-quan-tri-thuat-toan-don-gian-de-thiet-ke-mot-chu-trinh-quan-ly-kpi-hieu-qua/amp/"><link rel="dns-prefetch" href="http://PLACEHOLDER.wpsho"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="https://blog.cloudjetsolutions.com/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="hctpc_stylesheet-css" href="https://blog.cloudjetsolutions.com/wp-content/plugins/captcha/css/front_end_style.css" type="text/css" media="all"><link rel="stylesheet" id="dashicons-css" href="https://blog.cloudjetsolutions.com/wp-includes/css/dashicons.min.css" type="text/css" media="all"><link rel="stylesheet" id="hctpc_desktop_style-css" href="https://blog.cloudjetsolutions.com/wp-content/plugins/captcha/css/desktop_style.css" type="text/css" media="all"><script type="text/javascript" src="https://blog.cloudjetsolutions.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://blog.cloudjetsolutions.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><style type="text/css">
+figure.logo a, aside#logo div a, aside.kudo.complete span.circle{background-image: url(https://blog.cloudjetsolutions.com/wp-content/uploads/2014/03/cropped-CJS-original.jpg);}
     </style><script type="text/javascript">
 (function() {
 var useSSL = 'https:' == document.location.protocol;
@@ -75,9 +75,9 @@ fbq('track', "PageView");</script><noscript><img height="1" width="1" style="dis
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=139125536296053";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script><header id="sidebar"><figure class="logo medium"><a href="http://blog.cloudjetsolutions.com/">Cloudjet Blog</a>
-			</figure><h1><a href="http://blog.cloudjetsolutions.com/">Cloudjet Blog</a></h1>
-			<h2><a href="http://blog.cloudjetsolutions.com/"></a></h2>
+}(document, 'script', 'facebook-jssdk'));</script><header id="sidebar"><figure class="logo medium"><a href="https://blog.cloudjetsolutions.com/">Cloudjet Blog</a>
+			</figure><h1><a href="https://blog.cloudjetsolutions.com/">Cloudjet Blog</a></h1>
+			<h2><a href="https://blog.cloudjetsolutions.com/"></a></h2>
 			<h3>Accelerate Performance</h3>
 
 			<ul id="user_nav"><div class="menu"><ul><li class="page_item page-item-2">
@@ -87,14 +87,14 @@ fbq('track', "PageView");</script><noscript><img height="1" width="1" style="dis
 
 				
 			
-				<div class="menu-change-1-container"><ul id="menu-change-1" class="menu"><li id="menu-item-4293" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-4293"><a href="http://blog.cloudjetsolutions.com/category/quan-tri-nhan-su/">Quản Trị Nhân Sự</a>
-<ul class="sub-menu"><li id="menu-item-4295" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4295"><a href="http://blog.cloudjetsolutions.com/category/quan-tri-nhan-su/tuyen-dung-nhan-vien/">Tuyển dụng nhân viên</a></li>
-	<li id="menu-item-4296" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4296"><a href="http://blog.cloudjetsolutions.com/category/quan-tri-nhan-su/danh-gia-nhan-vien/">Đánh giá nhân viên</a></li>
-	<li id="menu-item-4297" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4297"><a href="http://blog.cloudjetsolutions.com/category/quan-tri-nhan-su/dao-tao-nhan-su/">Đào tạo nhân sự</a></li>
+				<div class="menu-change-1-container"><ul id="menu-change-1" class="menu"><li id="menu-item-4293" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-4293"><a href="https://blog.cloudjetsolutions.com/category/quan-tri-nhan-su/">Quản Trị Nhân Sự</a>
+<ul class="sub-menu"><li id="menu-item-4295" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4295"><a href="https://blog.cloudjetsolutions.com/category/quan-tri-nhan-su/tuyen-dung-nhan-vien/">Tuyển dụng nhân viên</a></li>
+	<li id="menu-item-4296" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4296"><a href="https://blog.cloudjetsolutions.com/category/quan-tri-nhan-su/danh-gia-nhan-vien/">Đánh giá nhân viên</a></li>
+	<li id="menu-item-4297" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4297"><a href="https://blog.cloudjetsolutions.com/category/quan-tri-nhan-su/dao-tao-nhan-su/">Đào tạo nhân sự</a></li>
 </ul></li>
-<li id="menu-item-4290" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-4290"><a href="http://blog.cloudjetsolutions.com/category/kpi1/">KPI & BSC</a></li>
-<li id="menu-item-4288" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4288"><a href="http://blog.cloudjetsolutions.com/category/quan-ly-ban-hang/he-thong-crm/">Hệ thống CRM</a></li>
-<li id="menu-item-4289" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4289"><a href="http://blog.cloudjetsolutions.com/category/hoc-hoi-phat-trien/">Học hỏi & Phát triển</a></li>
+<li id="menu-item-4290" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-4290"><a href="https://blog.cloudjetsolutions.com/category/kpi1/">KPI & BSC</a></li>
+<li id="menu-item-4288" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4288"><a href="https://blog.cloudjetsolutions.com/category/quan-ly-ban-hang/he-thong-crm/">Hệ thống CRM</a></li>
+<li id="menu-item-4289" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4289"><a href="https://blog.cloudjetsolutions.com/category/hoc-hoi-phat-trien/">Học hỏi & Phát triển</a></li>
 </ul></div>				
 						
 		
@@ -105,20 +105,20 @@ fbq('track', "PageView");</script><noscript><img height="1" width="1" style="dis
 googletag.display('div-gpt-ad-1382626878370-0');
 </script></div>
 
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><article id="5041" class="post"><h1 class="entry-title">	<a href="http://blog.cloudjetsolutions.com/nghe-thuat-quan-tri-thuat-toan-don-gian-de-thiet-ke-mot-chu-trinh-quan-ly-kpi-hieu-qua/" class="no-link" title="Permalink to [Nghệ Thuật Quản Trị] Thuật toán đơn giản để thiết kế một chu trình quản lý KPI hiệu quả" rel="bookmark">[Nghệ Thuật Quản Trị] Thuật toán đơn giản để thiết kế một chu trình quản lý KPI hiệu quả</a>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><article id="5041" class="post"><h1 class="entry-title">	<a href="https://blog.cloudjetsolutions.com/nghe-thuat-quan-tri-thuat-toan-don-gian-de-thiet-ke-mot-chu-trinh-quan-ly-kpi-hieu-qua/" class="no-link" title="Permalink to [Nghệ Thuật Quản Trị] Thuật toán đơn giản để thiết kế một chu trình quản lý KPI hiệu quả" rel="bookmark">[Nghệ Thuật Quản Trị] Thuật toán đơn giản để thiết kế một chu trình quản lý KPI hiệu quả</a>
 
 </h1>
 
 									<div class="entry-content">
-						<p>Thuật ngữ <strong><a href="http://blog.cloudjetsolutions.com/danh-gia-thuc-hien-cong-viec-theo-kpi-nhu-the-nao/" target="_blank">quản trị hiệu suất</a></strong> của nhân viên được nhắc tới rất nhiều trong những năm gần đây như là một xu hướng để tối đa hóa tất cả nguồn lực, đẩy mạnh năng suất làm việc, và tiết kiệm những chi phí huấn luyện, tuyển dụng dư thừa cho một doanh nghiệp.</p>
-<p>Với <a href="http://blog.cloudjetsolutions.com/danh-gia-thuc-hien-cong-viec-theo-kpi-nhu-the-nao/" target="_blank"><strong>5 bước của một quy trình đánh giá KPI</strong> </a>căn bản bao gồm:</p>
+						<p>Thuật ngữ <strong><a href="https://blog.cloudjetsolutions.com/danh-gia-thuc-hien-cong-viec-theo-kpi-nhu-the-nao/" target="_blank">quản trị hiệu suất</a></strong> của nhân viên được nhắc tới rất nhiều trong những năm gần đây như là một xu hướng để tối đa hóa tất cả nguồn lực, đẩy mạnh năng suất làm việc, và tiết kiệm những chi phí huấn luyện, tuyển dụng dư thừa cho một doanh nghiệp.</p>
+<p>Với <a href="https://blog.cloudjetsolutions.com/danh-gia-thuc-hien-cong-viec-theo-kpi-nhu-the-nao/" target="_blank"><strong>5 bước của một quy trình đánh giá KPI</strong> </a>căn bản bao gồm:</p>
 <ul><li>Xác định các yêu cầu cơ bản của đánh giá thực hiện công việc</li>
 <li>Xác định phương pháp đánh giá thực hiện công việc</li>
 <li>Đảm bảo cấp quản lý thực hiện đầy đủ việc đánh giá thực hiện công việc</li>
 <li>Thảo luận với từng phòng ban, nhân viên về buổi đánh giá thực hiện công việc</li>
 <li>Thực hiện đánh giá thực hiện công việc theo KPI</li>
 </ul><p>Thông thường những nhà quản lý sẽ gặp phải những vấn đề lý thuyết hết sức chung chung khi cố gắn tìm hiểu, định hướng, và chia nhỏ mục tiêu của những nhân viên cấp dưới. Vậy thì bài toán đặt ra là cơ sở định lượng nào được sử dụng để lượng hóa những chỉ tiêu của từng phòng ban với tính chất công việc khác nhau, hoặc là từng nhân viên với vai trò khác nhau trong một dự án. Thuật toán sau đây là một công thức tham khảo có tính chung nhất cho mọi dự án.</p>
-<div id="attachment_4943" style="width: 510px" class="wp-caption alignnone"><a href="http://blog.cloudjetsolutions.com/wp-content/uploads/2015/09/hddrawppstryrev.jpg"><img aria-describedby="caption-attachment-4943" class="wp-image-4943" src="http://blog.cloudjetsolutions.com/wp-content/uploads/2015/09/hddrawppstryrev-1024x819.jpg" alt="hand drawing idea board of business strategy process" width="500" height="400" srcset="http://blog.cloudjetsolutions.com/wp-content/uploads/2015/09/hddrawppstryrev-1024x819.jpg 1024w,http://blog.cloudjetsolutions.com/wp-content/uploads/2015/09/hddrawppstryrev-300x240.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"></a><p id="caption-attachment-4943" class="wp-caption-text">hand drawing idea board of business strategy process</p></div>
+<div id="attachment_4943" style="width: 510px" class="wp-caption alignnone"><a href="https://blog.cloudjetsolutions.com/wp-content/uploads/2015/09/hddrawppstryrev.jpg"><img aria-describedby="caption-attachment-4943" class="wp-image-4943" src="https://blog.cloudjetsolutions.com/wp-content/uploads/2015/09/hddrawppstryrev-1024x819.jpg" alt="hand drawing idea board of business strategy process" width="500" height="400" srcset="https://blog.cloudjetsolutions.com/wp-content/uploads/2015/09/hddrawppstryrev-1024x819.jpg 1024w,https://blog.cloudjetsolutions.com/wp-content/uploads/2015/09/hddrawppstryrev-300x240.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"></a><p id="caption-attachment-4943" class="wp-caption-text">hand drawing idea board of business strategy process</p></div>
 <p>Thuật ngữ <strong>quản trị hiệu suất</strong> của nhân viên được nhắc tới rất nhiều trong những năm gần đây như là một xu hướng để tối đa hóa tất cả nguồn lực, đẩy mạnh năng suất làm việc, và tiết kiệm những chi phí huấn luyện, tuyển dụng dư thừa cho một doanh nghiệp.</p>
 <p>Với <strong>5 bước của một quy trình đánh giá KPI</strong> căn bản bao gồm:</p>
 <ul><li>Xác định các yêu cầu cơ bản của đánh giá thực hiện công việc</li>
@@ -127,7 +127,7 @@ googletag.display('div-gpt-ad-1382626878370-0');
 <li>Thảo luận với từng phòng ban, nhân viên về buổi đánh giá thực hiện công việc</li>
 <li>Thực hiện đánh giá thực hiện công việc theo KPI</li>
 </ul><p>Thông thường những nhà quản lý sẽ gặp phải những vấn đề lý thuyết hết sức chung chung khi cố gắn tìm hiểu, định hướng, và chia nhỏ mục tiêu của những nhân viên cấp dưới. Vậy thì bài toán đặt ra là cơ sở định lượng nào được sử dụng để lượng hóa những chỉ tiêu của từng phòng ban với tính chất công việc khác nhau, hoặc là từng nhân viên với vai trò khác nhau trong một dự án. Thuật toán sau đây là một công thức tham khảo có tính chung nhất cho mọi dự án.</p>
-<p><a href="http://blog.cloudjetsolutions.com/wp-content/uploads/2015/10/Snap-2015-10-07-at-15.21.40.png"><img class="alignnone wp-image-5043" src="http://blog.cloudjetsolutions.com/wp-content/uploads/2015/10/Snap-2015-10-07-at-15.21.40.png" alt="Snap 2015-10-07 at 15.21.40" width="680" height="491" srcset="http://blog.cloudjetsolutions.com/wp-content/uploads/2015/10/Snap-2015-10-07-at-15.21.40.png 822w,http://blog.cloudjetsolutions.com/wp-content/uploads/2015/10/Snap-2015-10-07-at-15.21.40-300x217.png 300w" sizes="(max-width: 680px) 100vw, 680px"></a></p>
+<p><a href="https://blog.cloudjetsolutions.com/wp-content/uploads/2015/10/Snap-2015-10-07-at-15.21.40.png"><img class="alignnone wp-image-5043" src="https://blog.cloudjetsolutions.com/wp-content/uploads/2015/10/Snap-2015-10-07-at-15.21.40.png" alt="Snap 2015-10-07 at 15.21.40" width="680" height="491" srcset="https://blog.cloudjetsolutions.com/wp-content/uploads/2015/10/Snap-2015-10-07-at-15.21.40.png 822w,https://blog.cloudjetsolutions.com/wp-content/uploads/2015/10/Snap-2015-10-07-at-15.21.40-300x217.png 300w" sizes="(max-width: 680px) 100vw, 680px"></a></p>
 <p>Dựa theo mô hình thuật toán trên, một ví dụ cụ thể về thiết lập KPI cho bộ phận social marketing của công ty A giả định như sau.</p>
 <p>Đầu tiên là xác định ngân sách marketing trong năm 2015 của công ty A là 700 trăm triệu đồng, và mục tiêu kỳ vọng của công ty là có thêm 100 ngàn lượt view trên website, đồng thời phải tổ chức được 1 sự kiện chăm sóc khách hàng trong năm 2015.</p>
 <p>Vậy đề bài đã cho chúng ta xác định số định lượng được là 700 triệu đồng, tiếp theo công ty thông qua báo cáo đã xác định được sẽ chi 200 triệu đồng cho việc tăng lượt view của website, và 500 triệu đồng cho chuẩn bị sự kiện. Từ đó mỗi tháng chúng ta sẽ có chỉ tiêu cho mỗi quý sẽ là chi tiêu 16.66 triệu để tăng 8333 lượt view.</p>
@@ -146,7 +146,7 @@ googletag.display('div-gpt-ad-1382626878370-0');
 </div>
 
 <div class="clearfix" style="margin-top:15px;">
-	<div class="fb-like" data-href="http://blog.cloudjetsolutions.com/nghe-thuat-quan-tri-thuat-toan-don-gian-de-thiet-ke-mot-chu-trinh-quan-ly-kpi-hieu-qua/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+	<div class="fb-like" data-href="https://blog.cloudjetsolutions.com/nghe-thuat-quan-tri-thuat-toan-don-gian-de-thiet-ke-mot-chu-trinh-quan-ly-kpi-hieu-qua/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 </div>
 <div class="clearfix">
 	<div class="fb-like-box" data-href="https://www.facebook.com/cloudjetsolutions" data-show-faces="false" data-header="false" data-stream="false" data-show-border="true"></div>
@@ -174,7 +174,7 @@ googletag.display('div-gpt-ad-1382626878370-0');
 	<p class="nocomments">Comments are closed.</p>
 
 <nav class="pagination"><span class="prev">
-    <a href="http://blog.cloudjetsolutions.com/" class="back_to_blog">←   read more</a>
+    <a href="https://blog.cloudjetsolutions.com/" class="back_to_blog">←   read more</a>
   </span>
 </nav></section><script data-cfasync="false" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script data-cfasync="false" src="http://88.cloudjetsolutions.com/js/scrollToFix/jquery-scrolltofixed-min.js"></script><style type="text/css">
 .textwidget {
@@ -210,7 +210,7 @@ function getKudos() {
             article = $(this).closest("article").attr("id"),
                 e.push(article)
         }),
-        $.post("http://blog.cloudjetsolutions.com/wp-admin/admin-ajax.php", {
+        $.post("https://blog.cloudjetsolutions.com/wp-admin/admin-ajax.php", {
                 kudosList: e,
                 action: 'my_special_action'
             },
@@ -236,8 +236,8 @@ function setViewport() {
 
 function startCode() {
     $("code").addClass("prettyprint"),
-        $.getScript("http://blog.cloudjetsolutions.com/wp-content/themes/svbtle/js/prettify.js").done(function(e, t) {
-            var n = "http://blog.cloudjetsolutions.com/wp-content/themes/svbtle/css/prettify.css";
+        $.getScript("https://blog.cloudjetsolutions.com/wp-content/themes/svbtle/js/prettify.js").done(function(e, t) {
+            var n = "https://blog.cloudjetsolutions.com/wp-content/themes/svbtle/css/prettify.css";
             $.get(n,
                     function(e) {
                         $('<style type="text/css">').html(e).appendTo("head")
@@ -647,7 +647,7 @@ $(function() {
 
     function i(e) {
         var t = e.closest("article").attr("id");
-        $.post("http://blog.cloudjetsolutions.com/wp-admin/admin-ajax.php", {
+        $.post("https://blog.cloudjetsolutions.com/wp-admin/admin-ajax.php", {
                 article: t,
                 action: 'remove_kudos'
             },
@@ -664,7 +664,7 @@ $(function() {
 
     function s(e) {
         var t = e.closest("article").attr("id");
-        $.post("http://blog.cloudjetsolutions.com/wp-admin/admin-ajax.php", {
+        $.post("https://blog.cloudjetsolutions.com/wp-admin/admin-ajax.php", {
                 article: t,
                 action: 'my_special_action',
             },

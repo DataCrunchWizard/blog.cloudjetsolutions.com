@@ -1,0 +1,284 @@
+
+<!DOCTYPE html><html ng-app="cjet"><head> <meta charset="UTF-8"><meta name="keywords" content="kpi, đánh giá nhân viên, đánh giá nhân sự, đánh giá năng lực, kpi đánh giá nhân viên, đánh giá kpi, tiêu chuẩn đánh giá nhân viên, bản đánh giá nhân viên, đánh giá thực hiện công việc, nhân sự"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Quản lý, Xây dựng KPI & Bản Tiêu Chí Đánh Giá Năng Lực Nhân viên, Nhân sự, Hiệu Quả Công Việc. Giải pháp quản trị và đánh giá nhân sự theo hiệu suất. Quản lý hiệu quả bộ máy nhân sự doanh nghiệp. Xây dựng tiêu chuẩn đánh giá nhân viên theo KPI. Tư vấn KPI đánh giá nhân viên. Tối ưu hóa hiệu quả đánh giá năng lực và khả năng thực hiện công việc của nhân viên"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="google-site-verification" content="3w2kLzj2FKMRGxdAcT114l4MtzqaGyWljVUl6EFxIFs"/><meta property="fb:app_id" content="237235299740898"/><script type="text/javascript">
+
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    
+
+        ga('create', 'UA-35744404-2', 'auto');
+    
+    ga('send', 'pageview');
+
+</script><script>
+    var static_url = 'https://88.cjs.vn'
+    var _rollbarConfig = {
+        accessToken: "fd2ed27d649b400cb66d5ed36c4a551e",
+        captureUncaught: true,
+        payload: {
+            environment: "test"
+        }
+    };
+    !function (r) {
+        function o(e) {
+            if (t[e])return t[e].exports;
+            var n = t[e] = {exports: {}, id: e, loaded: !1};
+            return r[e].call(n.exports, n, n.exports, o), n.loaded = !0, n.exports
+        }
+
+        var t = {};
+        return o.m = r, o.c = t, o.p = "", o(0)
+    }([function (r, o, t) {
+        "use strict";
+        var e = t(1).Rollbar, n = t(2), i = static_url+ '/js/rollbar.min.js';
+        _rollbarConfig.rollbarJsUrl = _rollbarConfig.rollbarJsUrl || i;
+        var a = e.init(window, _rollbarConfig), l = n(a, _rollbarConfig);
+        a.loadFull(window, document, !1, _rollbarConfig, l)
+    }, function (r, o, t) {
+        "use strict";
+        function e(r) {
+            this.shimId = ++s, this.notifier = null, this.parentShim = r, this.logger = function () {
+            }, window.console && void 0 === window.console.shimId && (this.logger = window.console.log)
+        }
+
+        function n(r, o, t) {
+            window._rollbarWrappedError && (t[4] || (t[4] = window._rollbarWrappedError), t[5] || (t[5] = window._rollbarWrappedError._rollbarContext), window._rollbarWrappedError = null), r.uncaughtError.apply(r, t), o && o.apply(window, t)
+        }
+
+        function i(r) {
+            var o = e;
+            return l(function () {
+                if (this.notifier)return this.notifier[r].apply(this.notifier, arguments);
+                var t = this, e = "scope" === r;
+                e && (t = new o(this));
+                var n = Array.prototype.slice.call(arguments, 0), i = {shim: t, method: r, args: n, ts: new Date};
+                return window._rollbarShimQueue.push(i), e ? t : void 0
+            })
+        }
+
+        function a(r, o) {
+            if (o.hasOwnProperty && o.hasOwnProperty("addEventListener")) {
+                var t = o.addEventListener;
+                o.addEventListener = function (o, e, n) {
+                    t.call(this, o, r.wrap(e), n)
+                };
+                var e = o.removeEventListener;
+                o.removeEventListener = function (r, o, t) {
+                    e.call(this, r, o && o._wrapped ? o._wrapped : o, t)
+                }
+            }
+        }
+
+        function l(r, o) {
+            return o = o || window.console.log || function () {
+                    }, function () {
+                try {
+                    return r.apply(this, arguments)
+                } catch (t) {
+                    o("Rollbar internal error:", t)
+                }
+            }
+        }
+
+        var s = 0;
+        e.init = function (r, o) {
+            var t = o.globalAlias || "Rollbar";
+            if ("object" == typeof r[t])return r[t];
+            r._rollbarShimQueue = [], r._rollbarWrappedError = null, o = o || {};
+            var i = new e;
+            return l(function () {
+                if (i.configure(o), o.captureUncaught) {
+                    var e = r.onerror;
+                    r.onerror = function () {
+                        var r = Array.prototype.slice.call(arguments, 0);
+                        n(i, e, r)
+                    };
+                    var l, s, u = "EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");
+                    for (l = 0; l < u.length; ++l)s = u[l], r[s] && r[s].prototype && a(i, r[s].prototype)
+                }
+                return r[t] = i, i
+            }, i.logger)()
+        }, e.prototype.loadFull = function (r, o, t, e, n) {
+            var i = l(function () {
+                var r = o.createElement("script"), n = o.getElementsByTagName("script")[0];
+                r.src = e.rollbarJsUrl, r.async = !t, r.onload = a, n.parentNode.insertBefore(r, n)
+            }, this.logger), a = l(function () {
+                var o;
+                if (void 0 === r._rollbarPayloadQueue) {
+                    var t, e, i, a;
+                    for (o = new Error("rollbar.js did not load"); t = r._rollbarShimQueue.shift();)for (i = t.args, a = 0; a < i.length; ++a)if (e = i[a], "function" == typeof e) {
+                        e(o);
+                        break
+                    }
+                }
+                "function" == typeof n && n(o)
+            }, this.logger);
+            l(function () {
+                t ? i() : r.addEventListener ? r.addEventListener("load", i, !1) : r.attachEvent("onload", i)
+            }, this.logger)()
+        }, e.prototype.wrap = function (r, o) {
+            try {
+                var t;
+                if (t = "function" == typeof o ? o : function () {
+                            return o || {}
+                        }, "function" != typeof r)return r;
+                if (r._isWrap)return r;
+                if (!r._wrapped) {
+                    r._wrapped = function () {
+                        try {
+                            return r.apply(this, arguments)
+                        } catch (o) {
+                            throw o._rollbarContext = t() || {}, o._rollbarContext._wrappedSource = r.toString(), window._rollbarWrappedError = o, o
+                        }
+                    }, r._wrapped._isWrap = !0;
+                    for (var e in r)r.hasOwnProperty(e) && (r._wrapped[e] = r[e])
+                }
+                return r._wrapped
+            } catch (n) {
+                return r
+            }
+        };
+        for (var u = "log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError".split(","), p = 0; p < u.length; ++p)e.prototype[u[p]] = i(u[p]);
+        r.exports = {Rollbar: e, _rollbarWindowOnError: n}
+    }, function (r, o, t) {
+        "use strict";
+        r.exports = function (r, o) {
+            return function (t) {
+                if (!t && !window._rollbarInitialized) {
+                    var e = window.RollbarNotifier, n = o || {}, i = n.globalAlias || "Rollbar", a = window.Rollbar.init(n, r);
+                    a._processShimQueue(window._rollbarShimQueue || []), window[i] = a, window._rollbarInitialized = !0, e.processPayloads()
+                }
+            }
+        }
+    }]);
+
+
+</script>  <link rel="stylesheet" href="//88.cjs.vn/css/style.css?v=1" type="text/css" media="screen"/> <script src="//88.cjs.vn/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script><script src="//88.cjs.vn/js/utils.js"></script><link href='//88.cjs.vn/fonts/roboto-font/roboto.css' rel='stylesheet' type='text/css'><title>
+Đăng nhập
+</title><link rel="icon" href="//88.cjs.vn/cloudjet.ico"/><link rel="author" href="https://plus.google.com/107975323849103477884/"/><link rel="shortcut icon" href="//88.cjs.vn/favicon.ico" type="image/x-icon"><link href="//88.cjs.vn/css/per_landing_style.css?v=3.0.1-680-g2add87520140221" rel="stylesheet"> <script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1698117870461305');
+fbq('track', "PageView");</script><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1698117870461305&ev=PageView&noscript=1"/></noscript> </head><body class="side-menu-push" style=""><style type="text/css">.doc_item{background:url('//88.cjs.vn/kpi-img/icon1/check.png') 0 0 no-repeat;}.add-on .icon_date{background-image:url("//88.cjs.vn/kpi-img/icon1/icon-list.png");}.td_icon{background:url('//88.cjs.vn/kpi-img/icon1/icon-list.png') no-repeat -313px 3px;}.menu_top .home_back a .dev,.menu_top .home_back a:hover .dev{background:url('//88.cjs.vn/kpi-img/icon1/cv.png') 3px 0 no-repeat;}.menu_top .home_back a .save,.menu_top .home_back a:hover .save{background:url('//88.cjs.vn/kpi-img/icon1/save.png') 3px 0 no-repeat;}.menu_top .home_back a .reload,.menu_top .home_back a:hover .reload{background:url('//88.cjs.vn/kpi-img/icon1/reload.png') 3px 0 no-repeat;}.menu_top .home_back a .save,.menu_top .home_back a:hover .save{background:url('//88.cjs.vn/kpi-img/icon1/save.png') 3px 0 no-repeat;}.menu_top .home_back a .print,.menu_top .home_back a:hover .print{background:url('//88.cjs.vn/kpi-img/icon1/fax.png') 3px 0 no-repeat;}.menu_top .home_back a .note,.menu_top .home_back a:hover .note{background:url('//88.cjs.vn/kpi-img/icon1/stack.png') 3px 0 no-repeat;}.menu_top .home_back a .help,.menu_top .home_back a:hover .help{background:url('//88.cjs.vn/kpi-img/icon1/question.png') 3px 0 no-repeat;}.doc_item.check_icon{background:url(//88.cjs.vn/kpi-img/icon1/check-black.png) 0 0 no-repeat;}.popup_reg input[type=text].txt_phone{background:url('//88.cjs.vn/kpi-img/icon1/phone.png') 15px 7px no-repeat;}</style><div id="fb-root"></div><script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=564647290251137";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script><div style="display: none;">  <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1047959242;
+            var google_conversion_label = "RxaFCI6nrwcQyq3a8wM";
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+        </script><script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script><noscript><div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1047959242/?value=0&amp;label=RxaFCI6nrwcQyq3a8wM&amp;guid=ON&amp;script=0"/></div></noscript></div><div class="main" style="margin: 20px auto;"><div class="small_corners "><div class="loginwrapper" style="border: none;"><div class="left-column"><div style="text-align: center"><a href="http://cloudjetsolutions.com" target="_blank"><img src="//88.cjs.vn/logo/cloudjet.png" alt="Cloudjet Solutions" style="width: 275px;"></a><br/><br/><hr/></div><form method="post" action="."><input type='hidden' name='csrfmiddlewaretoken' value='GRmwCPfwPDmoWkOOBbgLKN8YRpQknBxB'/><div><h4>Login</h4></div><div><a href="#" onclick="window.location.href = window.location.href.replace(/^http:\/\//i, 'https://')">Click here for secure login url (https). </a></div><table><tbody><tr><td><label>Email:</label><input id="id_username" maxlength="254" name="username" type="text"/></td><td></td></tr><tr><td><label>Mật khẩu:</label><input id="id_password" name="password" type="password"/></td><td></td></tr></tbody></table><button class="btn btn-success"><b>Login</b></button>
+&nbsp;
+<input type="hidden" name="next" value="/performance/own-performance/"/><a href="/account/forgot-password/" style='font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;color: #161616;text-decoration: underline;'>
+Forgot Password?
+</a></form></div></div></div></div><style>.errorlist{color:red;}</style><script language="javascript">
+        $(document).ready(function () {
+            $(".left_fold").css("width", "100%");
+            $(".errorlist").css("margin-left", "0");
+
+
+        });
+        if (document.domain.indexOf('cjs') < 0 && document.domain.indexOf('127') < 0 && document.domain.indexOf('cloudjet-dev') < 0) {
+            //  location.href = "http://www.cjs.vn/login/";
+        }
+
+        if (false && getCookie('login') == undefined ) {
+            setCookie('login','yes',24);
+            var r = Math.floor((Math.random() * 10) + 1);
+            if (r >= 8) {
+                location.href = "http://www.cjs.vn/login/";
+
+            }
+            else {
+                location.href = "http://app.cloudjet.solutions/login/";
+
+            }
+        }
+
+    </script><div style="position: fixed;right: 0;bottom: 0;background-color: #fff;display: none;" id="facebook-box"></div><style>@media (max-width: 930px) {#facebook-box{display:none;}}</style><script type="text/javascript">
+        var close = false;
+        $(".close-facebook-like").click(function () {
+            $("#facebook-box").fadeOut();
+            close = true;
+        })
+        $(window).scroll(function () {
+            if ($(document).height() - $(document).height() * 0.4 < window.scrollY && $(document).width() > 900 && !close) {
+                $("#facebook-box").show();
+            } else {
+                $("#facebook-box").hide();
+            }
+        });
+        function setCookie(c_name, value, hours) {
+            var exdate = new Date();
+            exdate.setTime(exdate.getTime() + hours * 3600 * 1000);
+            var c_value = escape(value) + ((hours == null) ? "" : "; expires=" + exdate.toUTCString());
+            c_value = c_value + "; path=/";
+            document.cookie = c_name + "=" + c_value;
+        }
+
+        function getCookie(c_name) {
+            var i, x, y, ARRcookies = document.cookie.split(";");
+            for (i = 0; i < ARRcookies.length; i++) {
+                x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+                y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+                x = x.replace(/^\s+|\s+$/g, "");
+                if (x == c_name) {
+                    return unescape(y);
+                }
+            }
+        }
+
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+        }
+
+        var param = getURLParameter('utm_source');
+        if (param && param != "") {
+            setCookie('utm_source', param, 2);
+        }
+
+        var utm_medium = getURLParameter('utm_medium');
+        if (utm_medium && utm_medium != '') {
+            setCookie('utm_medium', utm_medium, 2);
+        }
+    </script><style>.intercom-launcher-button{box-shadow:0px 6px 13px 0px rgba(0,0,0,0.23);}.intercom-launcher-button{background-image:url(https://js.intercomcdn.com/images/icon-launcher.png);background-size:22px 22px;background-repeat:no-repeat;border-radius:50%;border-style:solid;border-width:1px;position:absolute;bottom:0;right:0;width:48px;height:48px;cursor:pointer;background-position:center;background-color:#3fa603;border-color:#177e00;}.helpdesk{position:fixed;bottom:15px;right:15px;}.helpdesk-body{background:url(//88.cjs.vn/img/helpdesk-bg.jpg) no-repeat;height:100%;width:100%;min-height:288px;}</style><div class="helpdesk"><a href="#helpdesk-modal" data-toggle="modal"><div class="intercom-launcher-button"></div></a></div><div id="helpdesk-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="background-color: transparent;"><div class="modal-body helpdesk-body"><button type="button" style="right: -55px;top: 0px;" class="close" data-dismiss="modal" aria-hidden="true">×</button><div style="width: 350px;margin: 2.4em 14em;"><p style="color: #5e5e5e;text-indent: 20px;">Bạn gặp <strong>khó khăn</strong> khi sử dụng hoặc có câu hỏi <strong>thắc mắc</strong>, vui lòng liên hệ số điện thoại Hotline để được hỗ trợ trực tiếp tức thì:</p><div style="font-size: 20px;color: #006fc5;font-weight: bold;margin-left: 60px">
++ (08) 668 08 662<br>
++ (08) 665 99 998<br>
++ 0969 122 239 (Hỗ trợ kĩ thuật)
+</div><p style="color: #5e5e5e;text-indent: 20px;margin-top: 20px;">Hoặc gởi email đến:
+</p><a href="/cdn-cgi/l/email-protection#761e131a1a1936151a1903121c130205191a03021f1918055815191b" style="font-size: 20px;color: #006fc5;font-weight: bold;margin-left: 60px"><span class="__cf_email__" data-cfemail="6f070a0303002f0c03001a0b050a1b1c00031a1b0600011c410c0002">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></div></div></div><div id="spot-im-root"></div><script type="text/javascript">
+        $(function () {
+            $('a[href*=#]:not([href=#]):not([data-toggle=modal])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 800);
+                        return false;
+                    }
+                }
+            });
+
+        })
+    </script><script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body></html>
